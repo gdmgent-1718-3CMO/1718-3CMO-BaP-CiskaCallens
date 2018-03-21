@@ -3,15 +3,17 @@
 permalink: /
 ---
 </div>
-<body>
-		<div id="top"></div>
+<body data-spy="scroll" data-target=".navbar" data-offset="50"><div class="row">
+<div id="top"></div>
 <div class="col-sm-12 header">        
-HUISSTIJLGIDS<br><br>
-RUITERCLUB<br><br>
+HUISSTIJLGIDS<br>
+RUITERCLUB<br>
 RODEBERG
 </div>  
+</div>
 
-<div class="row sectie1">
+<div class="row">
+		<div id="section1"></div>
 		<div class="col-sm-6 welkom" style="background-color:rgb(255, 255, 255)">
 			WELKOM.
 		</div>
@@ -19,9 +21,29 @@ RODEBERG
 				In 2017 kozen we ervoor onze manege volledig te <strong>renoveren</strong>.<br> De stallen, de bar en het vakantiehuis werden flink onder handen genomen. Dus dachten wij, laten we onze huisstijl ook eens in een nieuw jasje steken. Van logo tot ons rodeberg-rood. Alles kreeg een nieuwe look. Om deze look gemakkelijk naar onze klanten duidelijk te maken ontwierpen we deze huisstijlgids.
 		</div>
 </div>
+<!-- Wie -->
+<div class="row">
+		<div id="section2"></div>
+		<div class="col-sm-6 logo" style="background-color:rgb(103, 19, 20)">
+			Ruiterclub.
+		</div>
+		<div class="col-sm-6 doorlopendrood" style="background-color:white;">
+				Het logo is opgemaakt uit een beeld en een baseline. Deze gaan altijd samen tenzij het logo heel erg klein moet weergegeven worden. Dan valt de baseline weg. Baseline en beeld moeten altijd in verhouding tegenover elkaar staan. Het logo kan voorkomen in verschillende kleuren. De zwartwit versie van het logo wordt enkel gebruikt wanneer er niet in kleur gedrukt kan worden. 
+			</div>
+</div>
+<!-- Tone of voice -->
+<div class="row sectie1">
+		<div id="section3"></div>
+		<div class="col-sm-6 welkom" style="background-color:rgb(255, 255, 255)">
+			Tone of voice.
+		</div>
+		<div class="col-sm-6 doorlopend" style="background-color:rgb(103, 19, 20)">
+				<img class="tov" src="./images/tov.png" alt="logo" />
+		</div>
+</div>
 <!-- LOGO -->
 <div class="row">
-		<div id="section-one"></div>
+		<div id="section4"></div>
 		<div class="col-sm-6 logo" style="background-color:rgb(103, 19, 20)">
 			LOGO.
 		</div>
@@ -32,6 +54,7 @@ RODEBERG
 <div class="row" style="background-color:white;">
 		
 		<div class="col-sm-6 doorlopendrood" style="background-color:white;">
+			
 				<ul>
 						<li>geen ander lettertype</li>
 						<li>verdraai het logo niet</li>
@@ -43,6 +66,15 @@ RODEBERG
 		</div>
 		<div class="col-sm-6">
 				<img class="logo1" src="./images/logo.png" alt="logo" />
+		</div>
+</div>
+<div class="row" style="background-color:white;">
+		
+		<div class="col-sm-6 logo100" style="background-color:white;">
+				Wanneer je ons logo met andere grafische elementen gebruikt, zorg er dan voor dat het logo genoeg ademruimte krijgt. De afstand tussen het logo en andere elementen moet minimum 150 procent zijn. Gebruik het logo niet kleiner dan 16px, om er zeker van te zijn dat het logo altijd tot zijn recht komt		
+		</div>
+		<div class="col-sm-6">
+				<img class="logo10" src="./images/logo100.png" alt="logo" />
 		</div>
 </div>
 <br>
@@ -64,7 +96,7 @@ RODEBERG
 		</div>
 <!-- KLEUR -->
 		<div class="row">
-				<div id="section-two"></div>
+				<div id="section5"></div>
 				<div class="col-sm-6 logo" style="background-color:rgb(103, 19, 20)">
 					KLEUR.
 				</div>
@@ -92,7 +124,7 @@ RODEBERG
 
 <!-- TYPO -->
 <div class="row">
-		<div id="section-three"></div>
+		<div id="section6"></div>
 		<div class="col-sm-6 logo" style="background-color:rgb(103, 19, 20)">
 			TYPO.
 		</div>
@@ -113,12 +145,20 @@ RODEBERG
 						<li><a href="https://fonts.google.com/specimen/Roboto">roboto free download</a> </li>
 					</ul>		
 		</div>
+		<div class="col-sm-6" >
+				<img class="roboto" src="./images/roboto.png" alt="logo" />
+		</div>	
 		<div class="col-sm-6">
-				<img class="logo1" src="./images/typo.png" alt="logo" />
-		</div>		
+			<img class="typo2" src="./images/typo2.png" alt="logo" />
+	</div>
+	<div class="col-sm-6">
+		<img class="typo" src="./images/typo.png" alt="logo" />
+</div>
+
 </div>	
+<!-- lay out -->
 <div class="row">
-		<div id="section-four"></div>
+		<div id="section7"></div>
 		<div class="col-sm-6 logo" style="background-color:rgb(103, 19, 20)">
 			LAY-OUT.
 		</div>
@@ -143,4 +183,33 @@ RODEBERG
 				<img class="logo1" src="./images/station.png" alt="logo" />
 		</div>		
 </div>	
+
+<script>
+		$(document).ready(function(){
+		  // Add scrollspy to <body>
+		  $('body').scrollspy({target: ".navbar", offset: 50});   
+		
+		  // Add smooth scrolling on all links inside the navbar
+		  $("#myNavbar a").on('click', function(event) {
+			// Make sure this.hash has a value before overriding default behavior
+			if (this.hash !== "") {
+			  // Prevent default anchor click behavior
+			  event.preventDefault();
+		
+			  // Store hash
+			  var hash = this.hash;
+		
+			  // Using jQuery's animate() method to add smooth page scroll
+			  // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+			  $('html, body').animate({
+				scrollTop: $(hash).offset().top
+			  }, 800, function(){
+		   
+				// Add hash (#) to URL when done scrolling (default click behavior)
+				window.location.hash = hash;
+			  });
+			}  // End if
+		  });
+		});
+		</script>
 </body>
