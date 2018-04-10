@@ -164,6 +164,17 @@ a:active {
   width: 100%;
 }
 
+.btn1{
+  color: white;
+  background-color: rgb(103, 19, 20);
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 4px;
+  margin-top: 10px;
+
+}
 .typo{
   width: 86%;
   padding-top: 100px;
@@ -275,7 +286,14 @@ a:active {
   }
 
   .volvlak{
-    width: 90%
+    width: 80%;
+    padding-top: 100px;
+    padding-left: 20px;
+  }
+
+  .trui{
+    width: 100%;
+   padding-top: 150px;
   }
   
   .foto{
@@ -330,7 +348,7 @@ footer {
   z-index: 99; /* Make sure it does not overlap */
   border: none; /* Remove borders */
   outline: none; /* Remove outline */
-  background-color:$mycolor-3; /* Set a background color */
+  background-color:rgb(103, 19, 20);; /* Set a background color */
   color: white; /* Text color */
   cursor: pointer; /* Add a mouse pointer on hover */
   //padding: 15px; /* Some padding */
@@ -339,7 +357,7 @@ footer {
   border-radius: 20px; /* Rounded corners */
   font-size: 18px; /* Increase font size */
   &:hover {
-    background-color:$mycolor-5; 
+    background-color:lightgray; 
   }
 }
 
